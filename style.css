@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #efefef;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1876f2;
+    padding: 5px 5%;
+    position: sticky;
+    top: 0;/*position is stick from the top 0 position. if we scroll, the nav bar will be visible still*/
+    z-index: 100;
+}
+.nav-left, .nav-right{
+    display: flex;
+    align-items: center;
+}
+.nav-left ul li{
+    display: inline-block;
+    list-style: none;
+}
+.nav-left ul li i{
+    margin: 0 15px;
+}
+.nav-user-icon{
+    margin-left: 30px;
+}
+.online{
+    position: relative;
+}
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #41db51;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.left-sidebar{
+    flex-basis: 25%;
+
+    align-self: flex-start;
+}
+.right-sidebar{
+    flex-basis: 25%;
+    
+    align-self: flex-start;
+    background: #fff;
+    padding: 20px;
+}
+.main-content{
+    flex-basis: 47%;
+    margin-top: 10px;
+}
+.imp-links a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color:#626262;
+    width: fit-content;
+margin-top: 10px;
+}
+.imp-links{
+    border-bottom: 1px solid #ccc;
+}
+.sidebar-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+.sidebar-title h4{
+    font-weight: 600;
+    font-size: 16px;
+}
+.sidebar-title a{
+    text-decoration: none;
+    color: #1876f2;
+    font-size: 12px;
+}
+.event{
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.left-event{
+    height: 65px;
+    width: 65px;
+    margin-right: 15px;
+    padding-top: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0,0.1);
+}
+.left-event span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1876f2;
+    color: #fff;
+    font-size: 10px;
+    padding: 4px 0;
+}
+.story-gallery{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.story{
+    flex-basis: 18%;
+    padding-top: 32%;
+    position: relative;
+    /*linear gradient in background image is used sometimes to increase the visibility of the font*/
+    background-image:url(https://images.unsplash.com/photo-1721332149274-586f2604884d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8);
+    background-position: center;
+    background-size: cover;
+}
+.story i{
+    position: absolute;
+    top:15px;
+    cursor: pointer;
+}
+.story p{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+#m{
+    width:45px;
+}
+.write-post-container{
+    width:100%;
+    background: #fff;
+    padding: 20px;
+    color: #626262;
+}
+.user-profile{
+    display: flex;
+    align-items: center;
+}
+.post-input-container textarea{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    resize: none;
+}
+.post-input-container{
+    padding-left: 55px;
+    padding-top: 20px;
+}
+.post-container{
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    color: #626262;
+    margin: 20px 0;
+}
+.post-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.activity-icons div img{
+    margin-right: 10px;
+}
+.activity-icons div{
+    display: inline-flex;
+    align-items: center ;
+    margin-right: 30px;
+}
+.post-row a{
+    color: red;
+}
+.settings-menu{
+    position: absolute;
+    width: 90%;
+    max-width: 350px;
+    height: 500px;
+    background: #fff;
+    overflow: hidden;
+    top: 108%;
+    right: 5%;
+    max-height: 0;/*this hides the menu*/
+    transition: max-height 0.3s;
+}
+.settings-menu-height{
+    max-height: 450;
+}
